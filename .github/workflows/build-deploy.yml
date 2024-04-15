@@ -33,7 +33,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install & Build
-        working-directory: ./packages/assessment
         run: npm ci
           npm run build
       - name: Setup Pages
