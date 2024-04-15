@@ -32,6 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install & Build
+        with:
+          # Upload entire repository
+          path: "./packages/assessment/build"
         run: npm ci
           npm run build
       - name: Setup Pages
