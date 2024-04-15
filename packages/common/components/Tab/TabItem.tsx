@@ -21,7 +21,7 @@ export const TabItem = ({
       {({ selected }) => (
         <Button
           className={twMerge(
-            "px-4 py-2 text-white text-sm lg:text-base font-Montserrat font-semibold cursor-pointer",
+            "px-4 py-2 text-white text-sm lg:text-base font-Calibri font-semibold cursor-pointer",
             className,
             selected ? "border-b-2 border-orange" : "",
             selected ? selectedClassName : ""

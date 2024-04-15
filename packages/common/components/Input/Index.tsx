@@ -14,6 +14,11 @@ interface InputProps {
   ariaInvalid?: boolean;
   ariaDescribedby?: string;
   onChange?: ComponentPropsWithoutRef<"input">["onChange"];
+  onKeyPress?: ComponentPropsWithoutRef<"input">["onKeyPress"];
+  onKeyDown?: ComponentPropsWithoutRef<"input">["onKeyDown"];
+  onKeyUp?: ComponentPropsWithoutRef<"input">["onKeyUp"];
+  onBlur?: ComponentPropsWithoutRef<"input">["onBlur"];
+  onFocus?: ComponentPropsWithoutRef<"input">["onFocus"];
   onChangeSelect?: (e: Option) => void;
   value?: ComponentPropsWithoutRef<"input">["value"] | Option;
   label?: string | JSX.Element;
@@ -76,6 +81,11 @@ const InputField = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
     searchBoxClasses,
     optionsListClasses,
     notFoundClasses,
+    onKeyPress,
+    onKeyDown,
+    onKeyUp,
+    onBlur,
+    onFocus,
   } = props;
 
   if (type === "hidden") {
@@ -137,6 +147,11 @@ const InputField = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
         disabled={disabled}
         required={isRequired}
         defaultValue={defaultValue}
+        onKeyPress={onKeyPress}
+        onKeyDown={onKeyDown}
+        onKeyUp={onKeyUp}
+        onBlur={onBlur}
+        onFocus={onFocus}
       />
     </>
   );

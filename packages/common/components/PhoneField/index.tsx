@@ -116,7 +116,7 @@ const PhoneField = <C extends FieldValues>({
           >
             <label
               className={twMerge(
-                "font-Rubik text-xl !mb-2",
+                "font-Calibri text-xl !mb-2",
                 disabled && "opacity-50",
                 labelClassName
               )}

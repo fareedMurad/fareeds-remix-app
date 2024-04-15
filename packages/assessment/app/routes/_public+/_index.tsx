@@ -1,5 +1,6 @@
 import React from "react";
 import type { V2_MetaFunction } from "@remix-run/node";
+import BasicCommandInterface from "~/components/BasicCommandInterface";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -9,5 +10,9 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export default function Index() {
-  return <>This is the landing page!</>;
+  return (
+    <div>
+      <BasicCommandInterface />
+    </div>
+  );
 }

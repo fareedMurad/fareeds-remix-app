@@ -35,7 +35,7 @@ const InputMaskField: FC<Properties> = ({
         <div className={wrapperLabelClassName}>
           <span
             className={twMerge(
-              "font-bold font-Montserrat text-sm mb-1",
+              "font-bold font-Calibri text-sm mb-1",
               labelClasses
             )}
           >

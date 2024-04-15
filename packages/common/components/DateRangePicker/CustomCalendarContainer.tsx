@@ -20,13 +20,13 @@ export const CustomCalendarContainer: React.FC<Props> = ({
     <div className="bg-white w-full">
       <div className="flex flex-col gap-y-1.5 py-1.5">
         <div className="p-1.5 flex items-center justify-between w-[208px] mx-auto bg-aliceWhite">
-          <span className="font-Rubik text-xs">
+          <span className="font-Calibri text-xs">
             {startDate ? formatDate(startDate) : ""}
           </span>
           <img src={CalendarIcon} alt="" className="text-black w-3.5" />
         </div>
         <div className="p-1.5 flex items-center justify-between w-[208px] mx-auto bg-aliceWhite">
-          <span className="font-Rubik text-xs">
+          <span className="font-Calibri text-xs">
             {endDate ? formatDate(endDate) : ""}
           </span>
           <img src={CalendarIcon} alt="" className="text-black w-3.5" />

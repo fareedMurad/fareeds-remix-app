@@ -10,14 +10,14 @@ export default function PublicLayout({
   const isLargeContent = ["/public-challenge"].includes(location.pathname);
 
   return (
-    <div className="lg:h-[1500px] flex flex-col">
+    <div className="flex flex-col">
       <main
         className={twMerge(
           "w-full grow",
           isLargeContent ? "bg-footerGradient" : ""
         )}
       >
-        <div className="container mx-auto py-4">{children}</div>
+        <div className="container mx-auto">{children}</div>
       </main>
     </div>
   );

@@ -28,7 +28,7 @@ export const DateRangePicker: React.FC<Props> = (props) => {
       <DatePicker
         selectsRange={true}
         className={cn(
-          "h-[30px] px-4 py-2 box-content bg-white font-Rubik text-base w-[250px] text-black",
+          "h-[30px] px-4 py-2 box-content bg-white font-Calibri text-base w-[250px] text-black",
           className
         )}
         dateFormat="dd MMM yyyy"

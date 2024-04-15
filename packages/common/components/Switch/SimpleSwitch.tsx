@@ -15,7 +15,7 @@ function SimpleSwitch<T extends string>({
   label,
 }: SimpleSwitchProps<T>) {
   return (
-    <div className="font-Rubik flex items-baseline">
+    <div className="font-Calibri flex items-baseline">
       <div className="text-black leading-tight whitespace-nowrap mr-5">
         {label}
       </div>
