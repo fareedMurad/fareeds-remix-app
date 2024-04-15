@@ -3,6 +3,7 @@ import Input from "@fareeds-remix-app/common/components/Input/Index";
 import { PROMPT_COMMANDS } from "@fareeds-remix-app/common/models/static";
 import { Option } from "@fareeds-remix-app/common/components/Select";
 import CommandItem from "./CommandItem";
+import useOnClickOutside from "@fareeds-remix-app/common/hooks/useOnClickOutside";
 
 const MODAL_WIDTH = 300;
 const PROMPT_KEY = "/";
@@ -13,8 +14,10 @@ export default function BasicCommandInterface() {
     PROMPT_COMMANDS[0]
   );
   const inputRef = useRef(null);
+  const wrapperRef = useRef(null);
   const [position, setPosition] = useState({ x: 0 });
   const [inputValue, setInputValue] = useState("");
+  useOnClickOutside(wrapperRef, () => setCommandPrompOpen(false));
 
   const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.code === "Slash") {
@@ -26,6 +29,13 @@ export default function BasicCommandInterface() {
     } else {
       setCommandPrompOpen(false);
     }
+  };
+
+  const handleSelectCommand = (command: Option) => {
+    console.log(command, "New");
+    setSelectedCommand(command);
+    setInputValue(command.label as string);
+    setCommandPrompOpen(false);
   };
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,6 +62,7 @@ export default function BasicCommandInterface() {
       <CommandItem
         option={option}
         isActive={selectedCommand.value === option.value}
+        onSelect={handleSelectCommand}
       />
     ));
 
@@ -59,10 +70,6 @@ export default function BasicCommandInterface() {
     if (inputValue[inputValue?.length - 1] === PROMPT_KEY) {
       setCommandPrompOpen(true);
     }
-  };
-
-  const handleBlur = () => {
-    setCommandPrompOpen(false);
   };
 
   const handleArrowUpAndDownKeys = (
@@ -100,17 +107,15 @@ export default function BasicCommandInterface() {
       }
     }
   };
-
   return (
     <div className="flex items-center justify-center min-h-screen text-teal">
-      <div className="relative min-w-[300px]">
+      <div className="relative min-w-[300px]" ref={wrapperRef}>
         <Input
           id="basic-command-interface"
           placeholder="Type / for menu"
           className="px-2 py-1 w-full outline-none rounded"
           onChange={handleOnChange}
           ref={inputRef}
-          onBlur={handleBlur}
           onFocus={handleFocus}
           onKeyDown={handleArrowUpAndDownKeys}
           onKeyPress={handleInputKeyPress}
