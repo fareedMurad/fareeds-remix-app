@@ -121,15 +121,17 @@ export default function BasicCommandInterface() {
           onKeyPress={handleInputKeyPress}
           value={inputValue}
         />
-        {isCommandPromptOpen ? (
-          <div
-            className={`absolute top-10 min-h-[${MODAL_WIDTH}] w-full left-0 bg-lightCyan rounded-b-lg transition`}
-            style={{ left: position.x }}
-          >
-            <li className="p-2 list-none font-semibold">Insert</li>
-            <ul>{renderMenuOptions()}</ul>
-          </div>
-        ) : null}
+        <div
+          className={`absolute top-10 min-h-[${MODAL_WIDTH}] w-full left-0 bg-lightCyan rounded-b-lg transition ${
+            isCommandPromptOpen
+              ? `max-h-[400px] opacity-100`
+              : "max-h-0 invisible opacity-0"
+          } transition-all duration-200 ease overflow-hidden`}
+          style={{ left: position.x }}
+        >
+          <li className="p-2 list-none font-semibold">Insert</li>
+          <ul>{renderMenuOptions()}</ul>
+        </div>
       </div>
     </div>
   );
