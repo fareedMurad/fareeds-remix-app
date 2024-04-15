@@ -18,7 +18,7 @@ function Switch({ className, label, onChange, value }: SwitchProps) {
       >
         <SwitchRadix.Thumb className="block w-6 h-6 bg-white !rounded-full transition-transform duration-100 translate-x-0.5 will-change-transform data-[state=checked]:translate-x-[38px]" />
       </SwitchRadix.Root>
-      <label className="text-black text-base font-medium font-Rubik leading-tight pl-2.5">
+      <label className="text-black text-base font-medium font-Calibri leading-tight pl-2.5">
         {label}
       </label>
     </div>

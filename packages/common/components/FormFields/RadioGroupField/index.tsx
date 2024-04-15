@@ -77,7 +77,7 @@ const RadioGroupField = ({
           <>
             <h4
               className={twMerge(
-                "text-base font-bold font-Wadik mb-2.5",
+                "text-base font-bold font-Calibri mb-2.5",
                 labelClassName
               )}
             >

@@ -156,7 +156,7 @@ const Table = <T,>({
         <table className={cn("w-full", externalClasses)}>
           <thead
             className={cn(
-              "font-Wadik text-[8px] md:text-sm font-bold uppercase text-zinc-400",
+              "font-Calibri text-[8px] md:text-sm font-bold uppercase text-zinc-400",
               theadClasses
             )}
           >
@@ -248,7 +248,7 @@ const Table = <T,>({
                 itemsPerPageClassName
               )}
             >
-              <p className="font-Rubik text-sm font-normal mt-1 mr-1">View</p>
+              <p className="font-Calibri text-sm font-normal mt-1 mr-1">View</p>
               <Select
                 {...itemsPerPage}
                 className="w-0"

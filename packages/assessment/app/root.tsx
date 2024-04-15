@@ -34,7 +34,7 @@ function Document({ title, children }: DocumentProps) {
         <Meta />
         <Links />
       </head>
-      <body className="h-full font-Montserrat">
+      <body className="h-full font-Calibri">
         <AuthProvider>{children}</AuthProvider>
         <Toaster />
       </body>

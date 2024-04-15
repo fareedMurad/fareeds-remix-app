@@ -30,8 +30,8 @@ const config = cva(
         none: "",
       },
       font: {
-        montserrat: "font-Montserrat",
-        wadik: "font-Wadik",
+        montserrat: "font-Calibri",
+        wadik: "font-Calibri",
         lato: "font-Lato",
         spartan: "font-Spartan",
         inter: "font-Inter",

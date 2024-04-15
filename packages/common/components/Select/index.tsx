@@ -1,6 +1,6 @@
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, ReactNode, useMemo, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import InputField from "../Input/Index";
 import { InputSuffix } from "../InputSuffix/InputSuffix";
@@ -12,6 +12,7 @@ export type Option = {
   dial_code?: string | number;
   iso_code?: string | number;
   states?: string[];
+  icon?: string | ReactNode;
 };
 
 export type SelectProps = {
