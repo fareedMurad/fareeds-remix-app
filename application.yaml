@@ -9,7 +9,7 @@ spec:
     server: ARGOCD_EKS_CLUSTER_URL
   source:
     path: helm/
-    repoURL: "https://github.com/Easton-Consulting-Technologies/fareeds-remix-app.git"
+    repoURL: "https://github.com/fareedMurad/fareeds-remix-app.git"
     targetRevision: dev
     helm:
       values: |
