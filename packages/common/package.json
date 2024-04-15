@@ -1,0 +1,20 @@
+{
+  "name": "@fareeds-remix-app/common",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "scripts": {
+    "test:lint": "eslint \"*/**/*.{js,jsx,ts,tsx,json}\"",
+    "test:lint:fix": "eslint --fix \"*/**/*.{js,jsx,ts,tsx,json}\"",
+    "test:typecheck": "tsc",
+    "test:unit": "vitest --coverage",
+    "test:e2e": "true",
+    "postinstall": "true"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.35",
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-switch": "^1.0.3"
+  }
+}

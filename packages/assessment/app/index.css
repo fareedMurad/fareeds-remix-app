@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind theme;
+
+@font-face {
+  font-family: Wadik;
+  src: url(@fareeds-remix-app/common/assets/fonts/Wadik.otf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(@fareeds-remix-app/common/assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(@fareeds-remix-app/common/assets/fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: Spartan;
+  src: url(@fareeds-remix-app/common/assets/fonts/Spartan-Regular.ttf);
+}
+
+.hs-88 {
+  height: calc(theme('height.full') - theme('height.12'));
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.circular-chart {
+  display: block;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@layer base {
+  input.checkbox-primary[type="checkbox"] {
+    @apply h-[15px] w-[15px] bg-transparent border-2 rounded-sm [&:checked]:rounded-[5px] [&:checked]:border-none border-spinishgray accent-orange text-white appearance-none [&:checked]:!bg-orange [&:checked]:bg-checkboxBgWhite;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #ff9f00;
+}
+
+.circular-chart.green .circle {
+  stroke: #4CC790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.4em;
+  text-anchor: middle;
+}

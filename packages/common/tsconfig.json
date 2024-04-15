@@ -1,0 +1,16 @@
+{
+  "include": [
+    "custom.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Remix takes care of building everything in `remix build`.
+    "noEmit": true,
+    "paths": {
+      "~/*": ["./*"]
+    },
+  }
+}

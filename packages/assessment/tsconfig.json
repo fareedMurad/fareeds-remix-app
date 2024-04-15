@@ -1,0 +1,19 @@
+{
+  "include": [
+    "remix.env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./app/*"
+      ],
+      "@fareeds-remix-app/common/*": ["../common/*"]
+    },
+    // Remix takes care of building everything in `remix build`.
+    "noEmit": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "dev:assessment": "npm run dev -w=packages/assessment",
+    "test:lint": "npm run test:lint -ws",
+    "test:lint:fix": "npm run test:lint:fix -ws",
+    "test:typecheck": "npm run test:typecheck -ws",
+    "test:unit": "CI=1 npm run test:unit -ws",
+    "test:e2e": "CI=1 npm run test:e2e -ws",
+    "postinstall": "patch-package"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.35.1",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@vitest/coverage-v8": "^0.32.2",
+    "eslint": "^8.38.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "jsdom": "^22.1.0",
+    "patch-package": "^7.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "~5.0.4",
+    "vitest": "^0.32.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "@remix-run/testing": "^1.19.3",
+    "date-fns": "^2.30.0",
+    "esbuild": "^0.19.5",
+    "remix-utils": "^6.6.0"
+  }
+}
