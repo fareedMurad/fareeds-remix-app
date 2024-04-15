@@ -10,7 +10,7 @@ export default function PublicLayout({
   const isLargeContent = ["/public-challenge"].includes(location.pathname);
 
   return (
-    <div className="publicPageWrapper bg-mainBg bg-mainBgPosition bg-no-repeat bg-cover lg:h-[1500px] flex flex-col">
+    <div className="lg:h-[1500px] flex flex-col">
       <main
         className={twMerge(
           "w-full grow",

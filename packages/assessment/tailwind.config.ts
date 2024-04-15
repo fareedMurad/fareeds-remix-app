@@ -84,43 +84,7 @@ const config: Config = {
         riverBed: "#3A4E5E",
         granite: "#808080",
       },
-      backgroundImage: {
-        mainBg: "url('assets/images/BACKGROUND.png')",
-        btnBg: "url('assets/images/BtnBg.png')",
-        btnFrame: "url('assets/images/BtnFrame.png')",
-        frame: "url('assets/images/LoginFrame.png')",
-        logo: "url('assets/images/LOGO.png')",
-        seccessCheck: "url('assets/images/SuccessCheck.png')",
-        successFrame: "url('assets/images/SuccessFrame.png')",
-        trustPilot: "url('assets/images/TRUSTPILOT.png')",
-        leaderboardWinnerRatio: "url('assets/images/Winner-ratio.png')",
-        leaderboardWinnerRader: "url('assets/images/Rader.png')",
-        crown15: "url('assets/images/new-challenge/crown15-banner.png')",
-        footerGradient:
-          "linear-gradient( 360deg, #3f0c39 60.48%, rgba(64, 11, 58, 0) 79.69%, rgba(64, 11, 58, 0) 100% )",
-        footerGradientSm:
-          "linear-gradient(360deg, #3f0c39 60.48%, rgba(64, 11, 58, .3) 93.69%, rgba(64, 11, 58, 0) 100%)",
-        challengeType:
-          "url('assets/images/public-challenge/challenge-type-bg.png')",
-        challengeTypeBtn:
-          "url('assets/images/public-challenge/challenge-type-button-bg.png')",
-        payOrderBy: "url('assets/images/public-challenge/pay-order-by-bg.png')",
-        dialog: "url('assets/images/public-challenge/dialog-bg.png')",
-        orderReceive:
-          "url('assets/images/public-challenge/order-receive-bg.png')",
-        billingInformation:
-          "url('assets/images/public-challenge/billing-information-bg.png')",
-        orderSummary:
-          "url('assets/images/public-challenge/order-summary-bg.png')",
-        startNewChallenge:
-          "url('assets/images/public-challenge/start-new-challenge-bg.png')",
-        copy: "url('assets/images/copied_to_clipboard.png')",
-        checkboxBgWhite: `url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"/></svg>')`,
-        programType:
-          "linear-gradient(180deg, #D9C6F1 0%, rgba(255, 255, 255, 0.08) 100%)",
-        programTextBg: "linear-gradient(180deg, #774CB0 0%, #092136 100%)",
-        programBg: "linear-gradient(180deg, #092236 0%, #774CB0 100%)",
-      },
+      backgroundImage: {},
       backgroundPosition: {
         mainBgPosition: "left -200px",
       },
